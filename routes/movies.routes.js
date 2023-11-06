@@ -63,17 +63,17 @@ router.get("/:id/edit", (req, res) => {
 
 
 
-// router.post("/:id/edit", (req, res) => {
+router.post("/:id/edit", (req, res) => {
 
-//     const { id } = req.params
-//     const { title, genre, plot } = req.body
+    const { id } = req.params
+    const { title, genre, plot } = req.body
 
-//     Movie
-//         .findByIdAndUpdate(id, { title, genre, plot })
-//         .then(() => res.redirect("/movies"))
-//         .catch(err => console.log(err))
+    Movie
+        .findByIdAndUpdate(id, { title, genre, plot })
+        .then(() => res.redirect("/movies"))
+        .catch(err => console.log(err))
 
-// })
+})
 
 module.exports = router;
 
